@@ -14,12 +14,12 @@ data['quality']=pd.cut(data['quality'],bins=bins,labels=label)
 
 def predict():
     if request.method == 'POST':
-        fixed acidity=float(request.form['fixed acidity'])
-        volatile acidity=float(request.form['volatile acidity'])
-        citric acid=float(request.form['citric acid'])
-        residual sugar=float(request.form['residual sugar'])
+        fixed_acidity=float(request.form['fixed acidity'])
+        volatile_acidity=float(request.form['volatile acidity'])
+        citric_acid=float(request.form['citric acid'])
+        residual_sugar=float(request.form['residual sugar'])
         chlorides=float(request.form['chlorides'])
-        free sulphur dioxide=float(request.form['free sulphur dioxide'])
+        free_sulphur dioxide=float(request.form['free sulphur dioxide'])
         density=float(request.form['density'])
         pH=float(request.form['pH'])
         sulphates=float(request.form['sulphates'])
