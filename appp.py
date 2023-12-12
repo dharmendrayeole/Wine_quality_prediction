@@ -33,4 +33,4 @@ def predict():
         my_prediction=loaded_model.predict(data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    appp.run(debug=True)
