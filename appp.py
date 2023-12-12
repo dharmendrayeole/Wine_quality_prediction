@@ -36,7 +36,7 @@ rfc=RandomForestClassifier(n_estimators=100,max_depth=10,random_state=0)
 rfc.fit(X_train,Y_train)
 
 #predict the model on test_set
-rfc_pred=rf.predict(X_test)
+rfc_pred=rfc.predict(X_test)
 print(rfc_pred[:9])
 
 #get the performance of the model on test data
