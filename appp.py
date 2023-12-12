@@ -31,6 +31,3 @@ def predict():
                         chlorides,free_sulphur_dioxide,
                         density,pH,sulphates,alcohol]])
         my_prediction=loaded_model.predict(data)
-
-if __name__ == '__main__':
-    appp.run(debug=True)
