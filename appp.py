@@ -19,7 +19,7 @@ def predict():
         citric_acid=float(request.form['citric acid'])
         residual_sugar=float(request.form['residual sugar'])
         chlorides=float(request.form['chlorides'])
-        free_sulphur dioxide=float(request.form['free sulphur dioxide'])
+        free_sulphur_dioxide=float(request.form['free sulphur dioxide'])
         density=float(request.form['density'])
         pH=float(request.form['pH'])
         sulphates=float(request.form['sulphates'])
@@ -27,8 +27,8 @@ def predict():
         #load the pickle file
         filename='random_model.pickle'
         loaded_model=pickle.load(open(filename,'rb'))
-        data=np.array([[fixed acidity,volatile acidity,citric acid,residual sugar,
-                        chlorides,free sulphur dioxide,
+        data=np.array([[fixed_acidity,volatile_acidity,citric_acid,residual_sugar,
+                        chlorides,free_sulphur_dioxide,
                         density,pH,sulphates,alcohol]])
         my_prediction=loaded_model.predict(data)
 
