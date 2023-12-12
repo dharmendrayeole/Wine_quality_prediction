@@ -22,22 +22,22 @@ data.rename(columns={'pH':'pH','volatile acidity':'volatile_acidity',
                      },inplace=True)
 
 #split the data in to 'x' and 'y'
-x=data.iloc[:,:-1]
-y=data['quality']
+X=data.iloc[:,:-1]
+Y=data['quality']
 
 #split the data in to train and test split
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.15,random_state=0)
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.15,random_state=0)
 
 
 #Model building
 from sklearn.ensemble import RandomForestClassifier
-rf=RandomForestClassifier(n_estimators=100,max_depth=10,random_state=0)
-rf.fit(x_train,y_train)
+rfc=RandomForestClassifier(n_estimators=100,max_depth=10,random_state=0)
+rfc.fit(X_train,Y_train)
 
 #predict the model on test_set
-rf_pred=rf.predict(x_test)
-print(rf_pred[:9])
+rfc_pred=rf.predict(X_test)
+print(rfc_pred[:9])
 
 #get the performance of the model on test data
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
